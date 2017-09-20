@@ -1,7 +1,9 @@
-const model = require('./model');
+const Model = require('./model');
+const { connect } = require('models/utils');
 
 class Post extends Model {
   constructor(props) {
+    super(props);
     const {
       user,
       body
@@ -12,4 +14,4 @@ class Post extends Model {
   }
 }
 
-module.exports = Post;
+module.exports = connect(Post);

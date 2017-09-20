@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "transform-object-rest-spread",
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "config": "./config",
+        "interactors": "./src/interactors",
+        "core": "./src/main.js",
+        "models": "./src/models",
+        "gateways": "./src/gateways",
+        "utils": "./src/utils",
+        "test-utils": "./tests/utils"
+      }
+    }]
+  ]
+}

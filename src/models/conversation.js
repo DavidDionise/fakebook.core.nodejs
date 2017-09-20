@@ -1,7 +1,10 @@
-const model = require('./model');
+const Model = require('./model');
+const { connect } = require('models/utils');
 
 class Conversation extends Model {
-  constructor(props) {}
+  constructor(props) {
+    super(props);
+  }
 }
 
-module.exports = Conversation;
+module.exports = connect(Conversation);

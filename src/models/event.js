@@ -1,7 +1,9 @@
-const model = require('./model');
+const Model = require('./model');
+const { connect } = require('models/utils');
 
 class Event extends Model {
   constructor(props) {
+    super(props);
     const {
       user,
       title,
@@ -18,4 +20,4 @@ class Event extends Model {
   }
 }
 
-module.exports = Event;
+module.exports = connect(Event);

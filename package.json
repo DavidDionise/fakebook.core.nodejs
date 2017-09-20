@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir dist --source-maps inline"
+    "build": "babel src --out-dir dist --source-maps inline",
+    "watch": "babel src --watch --out-dir dist --source-maps inline",
+    "test:interactors:Users": "NODE_ENV=test TEST_DIR=interactors nodemon tests/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,15 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-module-resolver": "^2.7.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0"
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "should": "^13.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "mocha": "^3.5.3",
+    "pg-promise": "^6.7.1",
+    "promise-redis": "0.0.5",
+    "winston": "^2.3.1"
   }
 }
